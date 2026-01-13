@@ -26,7 +26,7 @@ Uma plataforma especializada de referência de configurações competitivas util
 ```bash
 # 1. Extraia o ZIP
 unzip Atlas
-cd Atlas
+cd Atlas-main
 
 # 2. Instale as dependências
 pnpm install
@@ -381,9 +381,9 @@ Este projeto é de código aberto e pode ser usado livremente para fins educacio
 
 ## 👤 Autor
 
-Desenvolvido como plataforma especializada de referência de configurações competitivas de VALORANT.
+Desenvolvido como plataforma especializada de referência de configurações competitivas de VALORANT
 
 ---
 
 **Última atualização**: Janeiro 2026  
-**Versão**: 1.0.0 (MVP)
+*Versão*: 1.0.0 (MVP)
