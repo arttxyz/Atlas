@@ -1,6 +1,6 @@
 import type { Team, Player } from '@/shared/types';
 
-// Equipes do VCT EMEA 2026
+//// Equipes do VCT EMEA 2026
 export const emeaTeams: Team[] = [
   {
     id: 'vitality',
