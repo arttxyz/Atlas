@@ -1,0 +1,701 @@
+import { Region, Team, Player, PlayerSettings, VCTRegion } from '@/../../shared/types';
+
+// Região VCT Americas
+export const vctAmericasRegion: Region = {
+  id: 'americas',
+  name: 'VCT Americas',
+  displayName: 'VALORANT Champions Tour - Americas',
+  logoUrl: '/images/vct-americas-logo.png',
+};
+
+// Equipes do VCT Americas 2026
+export const americasTeams: Team[] = [
+  {
+    id: 'envy',
+    name: 'ENVY',
+    tag: 'ENVY',
+    regionId: 'americas',
+    logoUrl: '/images/teams/envy-logo.png',
+    active: true,
+    foundedYear: 2020,
+  },
+  {
+    id: 'loud',
+    name: 'LOUD',
+    tag: 'LOUD',
+    regionId: 'americas',
+    logoUrl: '/images/teams/loud-logo.png',
+    active: true,
+    foundedYear: 2021,
+  },
+  {
+    id: 'kru-esports',
+    name: 'KRÜ Esports',
+    tag: 'KRÜ',
+    regionId: 'americas',
+    logoUrl: '/images/teams/kru-logo.png',
+    active: true,
+    foundedYear: 2018,
+  },
+  {
+    id: 'leviatan',
+    name: 'Leviatán',
+    tag: 'LEV',
+    regionId: 'americas',
+    logoUrl: '/images/teams/leviatan-logo.png',
+    active: true,
+    foundedYear: 2021,
+  },
+  {
+    id: 'mibr',
+    name: 'MIBR',
+    tag: 'MIBR',
+    regionId: 'americas',
+    logoUrl: '/images/teams/mibr-logo.png',
+    active: true,
+    foundedYear: 2016,
+  },
+  {
+    id: 'sentinels',
+    name: 'Sentinels',
+    tag: 'SEN',
+    regionId: 'americas',
+    logoUrl: '/images/teams/sentinels-logo.png',
+    active: true,
+    foundedYear: 2016,
+  },
+  {
+    id: 'furia',
+    name: 'FURIA',
+    tag: 'FURIA',
+    regionId: 'americas',
+    logoUrl: '/images/teams/furia-logo.png',
+    active: true,
+    foundedYear: 2018,
+  },
+  {
+    id: 'nrg',
+    name: 'NRG',
+    tag: 'NRG',
+    regionId: 'americas',
+    logoUrl: '/images/teams/nrg-logo.png',
+    active: true,
+    foundedYear: 2016,
+  },
+  {
+    id: 'g2-esports',
+    name: 'G2 Esports',
+    tag: 'G2',
+    regionId: 'americas',
+    logoUrl: '/images/teams/g2-logo.png',
+    active: true,
+    foundedYear: 2013,
+  },
+  {
+    id: 'cloud9',
+    name: 'Cloud9',
+    tag: 'C9',
+    regionId: 'americas',
+    logoUrl: '/images/teams/cloud9-logo.png',
+    active: true,
+    foundedYear: 2013,
+  },
+  {
+    id: '100-thieves',
+    name: '100 Thieves',
+    tag: '100T',
+    regionId: 'americas',
+    logoUrl: '/images/teams/100thieves-logo.png',
+    active: true,
+    foundedYear: 2016,
+  },
+  {
+    id: 'evil-geniuses',
+    name: 'Evil Geniuses',
+    tag: 'EG',
+    regionId: 'americas',
+    logoUrl: '/images/teams/evil-geniuses-logo.png',
+    active: true,
+    foundedYear: 2002,
+  },
+];
+
+// Jogadores do VCT Americas 2026
+export const americasPlayers: Player[] = [
+  // ENVY - Ativos
+  {
+    id: 'eggsterr',
+    name: 'Eggsterr',
+    teamId: 'envy',
+    role: 'Duelist',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'p0ppin',
+    name: 'P0PPIN',
+    teamId: 'envy',
+    role: 'Initiator',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'inspire',
+    name: 'inspire',
+    teamId: 'envy',
+    role: 'Sentinel',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'keznitdeus',
+    name: 'keznitdeuS',
+    teamId: 'envy',
+    role: 'Duelist',
+    country: 'Chile',
+    status: 'Active',
+  },
+  {
+    id: 'rossy',
+    name: 'Rossy',
+    teamId: 'envy',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+
+  // ENVY - Inativos
+  {
+    id: 'canezera',
+    name: 'canezera',
+    teamId: 'envy',
+    role: 'Duelist',
+    country: 'United States',
+    status: 'Benched',
+  },
+  {
+    id: 'ion2x',
+    name: 'ion2x',
+    teamId: 'envy',
+    role: 'Controller',
+    country: 'United States',
+    status: 'Benched',
+  },
+
+  // LOUD - Ativos
+  {
+    id: 'pancada',
+    name: 'pANcada',
+    teamId: 'loud',
+    role: 'Controller',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'cauanzin',
+    name: 'cauanzin',
+    teamId: 'loud',
+    role: 'Initiator',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'lukxo',
+    name: 'lukxo',
+    teamId: 'loud',
+    role: 'Sentinel',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'virtyy',
+    name: 'Virtyy',
+    teamId: 'loud',
+    role: 'Duelist',
+    country: 'Puerto Rico',
+    status: 'Active',
+  },
+  {
+    id: 'darker',
+    name: 'Darker',
+    teamId: 'loud',
+    role: 'Flex',
+    country: 'Colombia',
+    status: 'Active',
+  },
+
+  // KRÜ Esports - Ativos
+  {
+    id: 'saadhak',
+    name: 'Saadhak',
+    teamId: 'kru-esports',
+    role: 'Flex',
+    country: 'Argentina',
+    status: 'Active',
+  },
+  {
+    id: 'less',
+    name: 'Less',
+    teamId: 'kru-esports',
+    role: 'Sentinel',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'mwzera',
+    name: 'mwzera',
+    teamId: 'kru-esports',
+    role: 'Initiator',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'silentzz',
+    name: 'Silentzz',
+    teamId: 'kru-esports',
+    role: 'Duelist',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'dantedeu5',
+    name: 'DantedeuS',
+    teamId: 'kru-esports',
+    role: 'Flex',
+    country: 'Chile',
+    status: 'Active',
+  },
+
+  // Leviatán - Ativos
+  {
+    id: 'kingg',
+    name: 'kiNgg',
+    teamId: 'leviatan',
+    role: 'Controller',
+    country: 'Chile',
+    status: 'Active',
+  },
+  {
+    id: 'sato',
+    name: 'Sato',
+    teamId: 'leviatan',
+    role: 'Duelist',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'blowz',
+    name: 'blowz',
+    teamId: 'leviatan',
+    role: 'Initiator',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'spikezin',
+    name: 'spikeziN',
+    teamId: 'leviatan',
+    role: 'Sentinel',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'pxs',
+    name: 'PxS',
+    teamId: 'leviatan',
+    role: 'Flex',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'neon',
+    name: 'Neon',
+    teamId: 'leviatan',
+    role: 'Duelist',
+    country: 'Argentina',
+    status: 'Benched',
+  },
+
+  // MIBR - Ativos
+  {
+    id: 'aspas',
+    name: 'aspas',
+    teamId: 'mibr',
+    role: 'Duelist',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'zekken',
+    name: 'zekken',
+    teamId: 'mibr',
+    role: 'Initiator',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'mazino',
+    name: 'Mazino',
+    teamId: 'mibr',
+    role: 'Controller',
+    country: 'Chile',
+    status: 'Active',
+  },
+  {
+    id: 'tex',
+    name: 'tex',
+    teamId: 'mibr',
+    role: 'Sentinel',
+    country: 'Germany',
+    status: 'Active',
+  },
+  {
+    id: 'verno',
+    name: 'Verno',
+    teamId: 'mibr',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+
+  // Sentinels - Ativos
+  {
+    id: 'johnqt',
+    name: 'johnqt',
+    teamId: 'sentinels',
+    role: 'Controller',
+    country: 'Morocco',
+    status: 'Active',
+  },
+  {
+    id: 'n4rrate',
+    name: 'N4RRATE',
+    teamId: 'sentinels',
+    role: 'Sentinel',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'cortezia',
+    name: 'cortezia',
+    teamId: 'sentinels',
+    role: 'Duelist',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'reduxx',
+    name: 'reduxx',
+    teamId: 'sentinels',
+    role: 'Initiator',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'kyu',
+    name: 'Kyu',
+    teamId: 'sentinels',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+
+  // FURIA - Ativos
+  {
+    id: 'artzin',
+    name: 'artziN',
+    teamId: 'furia',
+    role: 'Duelist',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'alym',
+    name: 'alym',
+    teamId: 'furia',
+    role: 'Initiator',
+    country: 'Vietnam',
+    status: 'Active',
+  },
+  {
+    id: 'nerve',
+    name: 'nerve',
+    teamId: 'furia',
+    role: 'Controller',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'eeiu',
+    name: 'eeiu',
+    teamId: 'furia',
+    role: 'Sentinel',
+    country: 'Canada',
+    status: 'Active',
+  },
+  {
+    id: 'koalanoob',
+    name: 'koalanoob',
+    teamId: 'furia',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+
+  // NRG - Ativos
+  {
+    id: 'ethan',
+    name: 'Ethan',
+    teamId: 'nrg',
+    role: 'Duelist',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'mada',
+    name: 'mada',
+    teamId: 'nrg',
+    role: 'Initiator',
+    country: 'Canada',
+    status: 'Active',
+  },
+  {
+    id: 'brawk',
+    name: 'brawk',
+    teamId: 'nrg',
+    role: 'Controller',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'skuba',
+    name: 'skuba',
+    teamId: 'nrg',
+    role: 'Sentinel',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'keiko',
+    name: 'keiko',
+    teamId: 'nrg',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+
+  // G2 Esports - Ativos
+  {
+    id: 'valyn',
+    name: 'valyn',
+    teamId: 'g2-esports',
+    role: 'Duelist',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'trent',
+    name: 'trent',
+    teamId: 'g2-esports',
+    role: 'Initiator',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'leaf',
+    name: 'leaf',
+    teamId: 'g2-esports',
+    role: 'Controller',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'jawgemo',
+    name: 'jawgemo',
+    teamId: 'g2-esports',
+    role: 'Sentinel',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'babybay',
+    name: 'babybay',
+    teamId: 'g2-esports',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+
+  // Cloud9 - Ativos
+  {
+    id: 'oxy',
+    name: 'OXY',
+    teamId: 'cloud9',
+    role: 'Duelist',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'xeppaa',
+    name: 'Xeppaa',
+    teamId: 'cloud9',
+    role: 'Initiator',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'v1c',
+    name: 'v1c',
+    teamId: 'cloud9',
+    role: 'Controller',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'zellsis',
+    name: 'Zellsis',
+    teamId: 'cloud9',
+    role: 'Sentinel',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'penny',
+    name: 'penny',
+    teamId: 'cloud9',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+
+  // 100 Thieves - Ativos
+  {
+    id: 'cryocells',
+    name: 'Cryocells',
+    teamId: '100-thieves',
+    role: 'Duelist',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'asuna',
+    name: 'Asuna',
+    teamId: '100-thieves',
+    role: 'Initiator',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'bang',
+    name: 'bang',
+    teamId: '100-thieves',
+    role: 'Controller',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'vora',
+    name: 'vora',
+    teamId: '100-thieves',
+    role: 'Sentinel',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'timotino',
+    name: 'Timotino',
+    teamId: '100-thieves',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+
+  // Evil Geniuses - Ativos
+  {
+    id: 'c0m',
+    name: 'C0M',
+    teamId: 'evil-geniuses',
+    role: 'Duelist',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'supamen',
+    name: 'supamen',
+    teamId: 'evil-geniuses',
+    role: 'Initiator',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'bao',
+    name: 'bao',
+    teamId: 'evil-geniuses',
+    role: 'Controller',
+    country: 'United States',
+    status: 'Active',
+  },
+  {
+    id: 'dgzin',
+    name: 'dgzin',
+    teamId: 'evil-geniuses',
+    role: 'Sentinel',
+    country: 'Brazil',
+    status: 'Active',
+  },
+  {
+    id: 'okeanos',
+    name: 'okeanos',
+    teamId: 'evil-geniuses',
+    role: 'Flex',
+    country: 'United States',
+    status: 'Active',
+  },
+]; // <--- CORREÇÃO: Fechamento da lista americasPlayers
+
+// Função para gerar configurações aleatórias
+function generateRandomSettings(playerId: string): PlayerSettings {
+  const dpiOptions = [400, 450, 500, 600, 800, 1000, 1200];
+  const sensitivityOptions = [0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75];
+  const resolutions = ['1280x960', '1024x768', '1920x1080', '1280x1024', '1600x1024'];
+  const refreshRates = [240, 280, 360, 480];
+
+  const dpi = dpiOptions[Math.floor(Math.random() * dpiOptions.length)];
+  const sensitivity = sensitivityOptions[Math.floor(Math.random() * sensitivityOptions.length)];
+  const edpi = Math.round(dpi * sensitivity);
+  const resolution = resolutions[Math.floor(Math.random() * resolutions.length)];
+  const refreshRate = refreshRates[Math.floor(Math.random() * refreshRates.length)];
+
+  return {
+    playerId,
+    lastUpdated: '2026-01-10',
+    mouse: {
+      dpi,
+      sensitivity,
+      edpi,
+      hz: 8000,
+      rawInput: true,
+    },
+    video: {
+      resolution,
+      aspectRatio: resolution.includes('1920x1080') ? '16:9' : '4:3',
+      refreshRate,
+      displayMode: 'Fullscreen',
+    },
+    crosshair: {
+      code: '0#;c;1;o;1;0t;1;0l;2;0a;1;0f;0;1b;0',
+    },
+    peripherals: {
+      mouse: 'Professional Mouse',
+      keyboard: 'Mechanical Keyboard',
+      headset: 'Gaming Headset',
+      monitor: 'Gaming Monitor',
+      mousepad: 'Gaming Mousepad',
+    },
+  };
+}
+
+// Gerar configurações para todos os jogadores ativos
+export const playerSettingsExamples: PlayerSettings[] = americasPlayers
+  .filter((p) => p.status === 'Active')
+  .map((p) => generateRandomSettings(p.id));
