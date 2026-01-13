@@ -386,4 +386,4 @@ Desenvolvido como plataforma especializada de referência de configurações com
 ---
 
 **Última atualização**: Janeiro 2026  
-*Versão*: 1.0.0 (MVP)
+**Versão**: 1.0.0 (MVP)
