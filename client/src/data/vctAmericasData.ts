@@ -1,6 +1,6 @@
 import { Region, Team, Player, PlayerSettings, VCTRegion } from '@/../../shared/types';
 
-// Região VCT Americas
+//// Região VCT Americas
 export const vctAmericasRegion: Region = {
   id: 'americas',
   name: 'VCT Americas',
