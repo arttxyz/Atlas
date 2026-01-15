@@ -26,8 +26,8 @@ const regions: Region[] = [
   {
     id: 'apac',
     name: 'VCT APAC',
-    displayName: 'Em breve',
-    active: false,
+    displayName: 'Ativo',
+    active: true,
     logoUrl: '/images/regions/vct-apac-logo.png',
   },
   {

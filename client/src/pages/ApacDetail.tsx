@@ -1,18 +1,18 @@
 import { Link } from 'wouter';
 import TeamCard from '@/components/TeamCard';
 import RegionSelector from '@/components/RegionSelector';
-import { emeaTeams, emeaPlayers } from '@/data/vctEmeaData';
+import { apacTeams, apacPlayers } from '@/data/vctApacData';
 import type { Team, Player } from '@/shared/types';
 
-export default function EmeaDetail() {
+export default function ApacDetail() {
   // Contar jogadores por time
   const playersByTeam: Record<string, number> = {};
-  emeaTeams.forEach((team: Team) => {
-    playersByTeam[team.id] = emeaPlayers.filter((p: Player) => p.teamId === team.id).length;
+  apacTeams.forEach((team: Team) => {
+    playersByTeam[team.id] = apacPlayers.filter((p: Player) => p.teamId === team.id).length;
   });
 
-  const activePlayersCount = emeaPlayers.filter((p: Player) => p.status === 'Active').length;
-  const benchedPlayersCount = emeaPlayers.filter((p: Player) => p.status === 'Benched').length;
+  const activePlayersCount = apacPlayers.filter((p: Player) => p.status === 'Active').length;
+  const benchedPlayersCount = apacPlayers.filter((p: Player) => p.status === 'Benched').length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -31,7 +31,7 @@ export default function EmeaDetail() {
           </Link>
           <div className="flex items-center gap-4">
             <span className="text-sm font-semibold text-cyan-400 font-orbitron">
-              VCT EMEA
+              VCT APAC
             </span>
           </div>
         </div>
@@ -43,14 +43,14 @@ export default function EmeaDetail() {
         <div className="container relative z-10 space-y-6">
           <div className="space-y-2">
             <h1 className="text-4xl md:text-5xl font-black text-white font-orbitron tracking-wider leading-tight">
-              PRO SETTINGS HUB
+              PRO SETTINGS
             </h1>
             <p className="text-lg text-cyan-400 font-semibold">
               Configurações de profissionais
             </p>
           </div>
           <p className="text-gray-300 max-w-2xl text-base leading-relaxed">
-            Explore as configurações técnicas utilizadas pelos melhores jogadores profissionais de VALORANT.
+            Explore as configurações técnicas utilizadas pelos melhores jogadores profissionais de VALORANT da região APAC.
             DPI, sensibilidade, resolução e muito mais.
           </p>
 
@@ -58,7 +58,7 @@ export default function EmeaDetail() {
           <div className="grid grid-cols-3 gap-4 mt-8">
             <div className="bg-slate-800/50 border border-cyan-500/20 rounded p-4">
               <div className="text-2xl font-bold text-cyan-400 font-orbitron">
-                {emeaTeams.length}
+                {apacTeams.length}
               </div>
               <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">
                 Equipes
@@ -98,7 +98,7 @@ export default function EmeaDetail() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {emeaTeams.map((team) => (
+            {apacTeams.map((team) => (
               <TeamCard
                 key={team.id}
                 team={team}
@@ -126,7 +126,7 @@ export default function EmeaDetail() {
               <ul className="text-sm text-gray-400 space-y-1">
                 <li>VCT Americas (Ativo)</li>
                 <li>VCT EMEA (Ativo)</li>
-                <li>VCT APAC (Em breve)</li>
+                <li>VCT APAC (Ativo)</li>
                 <li>VCT China (Em breve)</li>
               </ul>
             </div>

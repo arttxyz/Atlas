@@ -8,11 +8,13 @@ import Home from "./pages/Home";
 import TeamDetail from "./pages/TeamDetail";
 import PlayerDetail from "./pages/PlayerDetail";
 import EmeaDetail from "./pages/EmeaDetail";
+import ApacDetail from "./pages/ApacDetail";
 
 
 function Router() {
   return (
     <Switch>
+      <Route path={"/region/apac"} component={ApacDetail} />
       <Route path={"/"} component={Home} />
       <Route path={"/region/emea"} component={EmeaDetail} />
       <Route path={"/region/:region"} component={Home} />

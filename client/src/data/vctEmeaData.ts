@@ -566,4 +566,51 @@ export const emeaPlayers: Player[] = [
     country: 'Turkey',
     status: 'Active',
   },
-];
+];// <--- Fechamento da lista apacPlayers
+
+// Função para gerar configurações aleatórias
+function generateRandomSettings(playerId: string): PlayerSettings {
+  const dpiOptions = [400, 450, 500, 600, 800, 1000, 1200];
+  const sensitivityOptions = [0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75];
+  const resolutions = ['1280x960', '1024x768', '1920x1080', '1280x1024', '1600x1024'];
+  const refreshRates = [240, 280, 360, 480];
+
+  const dpi = dpiOptions[Math.floor(Math.random() * dpiOptions.length)];
+  const sensitivity = sensitivityOptions[Math.floor(Math.random() * sensitivityOptions.length)];
+  const edpi = Math.round(dpi * sensitivity);
+  const resolution = resolutions[Math.floor(Math.random() * resolutions.length)];
+  const refreshRate = refreshRates[Math.floor(Math.random() * refreshRates.length)];
+
+  return {
+    playerId,
+    lastUpdated: '2026-01-10',
+    mouse: {
+      dpi,
+      sensitivity,
+      edpi,
+      hz: 8000,
+      rawInput: true,
+    },
+    video: {
+      resolution,
+      aspectRatio: resolution.includes('1920x1080') ? '16:9' : '4:3',
+      refreshRate,
+      displayMode: 'Fullscreen',
+    },
+    crosshair: {
+      code: '0#;c;1;o;1;0t;1;0l;2;0a;1;0f;0;1b;0',
+    },
+    peripherals: {
+      mouse: 'Professional Mouse',
+      keyboard: 'Mechanical Keyboard',
+      headset: 'Gaming Headset',
+      monitor: 'Gaming Monitor',
+      mousepad: 'Gaming Mousepad',
+    },
+  };
+}
+
+// Gerar configurações para todos os jogadores ativos
+export const playerSettingsExamples: PlayerSettings[] = emeaPlayers
+  .filter((p) => p.status === 'Active')
+  .map((p) => generateRandomSettings(p.id));

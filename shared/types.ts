@@ -5,7 +5,7 @@ export type PlayerRole = 'Duelist' | 'Controller' | 'Initiator' | 'Sentinel' | '
 export type PlayerStatus = 'Active' | 'Inactive' | 'Benched' | 'Free Agent';
 
 export interface Region {
-  id: VCTRegion;
+  id: string;
   name: string;
   displayName: string;
   logoUrl: string;
@@ -15,92 +15,45 @@ export interface Team {
   id: string;
   name: string;
   tag: string;
-  regionId: VCTRegion;
+  regionId: string;
   logoUrl: string;
   active: boolean;
-  foundedYear?: number;
+  foundedYear: number;
 }
 
 export interface Player {
   id: string;
-  nickname: string;
-  fullName: string;
+  name: string; // Garantindo que o campo se chama 'name'
   teamId: string;
-  role: PlayerRole;
-  status: PlayerStatus;
+  role: PlayerRole; // Usa o tipo fixo que definimos acima
   country: string;
-  countryCode: string;
-  joinedTeamDate?: string;
-  socials?: {
-    twitter?: string;
-    twitch?: string;
-    youtube?: string;
-  };
-}
-
-export interface MouseSettings {
-  dpi: number;
-  sensitivity: number;
-  edpi: number; // Calculated: dpi * sensitivity
-  hz: number; // Polling rate
-  rawInput: boolean;
-}
-
-export interface VideoSettings {
-  resolution: string;
-  aspectRatio: string;
-  refreshRate: number;
-  displayMode: 'Fullscreen' | 'Windowed' | 'Borderless';
-}
-
-export interface CrosshairSettings {
-  code: string; // Official VALORANT crosshair code
-  primary?: {
-    color?: string;
-    opacity?: number;
-  };
-  innerLines?: {
-    show: boolean;
-    length?: number;
-    offset?: number;
-    thickness?: number;
-  };
-  outerLines?: {
-    show: boolean;
-    length?: number;
-    offset?: number;
-    thickness?: number;
-  };
-  center?: {
-    show: boolean;
-    opacity?: number;
-  };
-}
-
-export interface Peripherals {
-  mouse?: string;
-  keyboard?: string;
-  headset?: string;
-  monitor?: string;
-  mousepad?: string;
+  status: PlayerStatus; // Usa o tipo fixo que definimos acima
 }
 
 export interface PlayerSettings {
   playerId: string;
   lastUpdated: string;
-  mouse: MouseSettings;
-  video: VideoSettings;
-  crosshair: CrosshairSettings;
-  peripherals: Peripherals;
-  notes?: string;
-}
-
-export interface TeamRoster {
-  teamId: string;
-  players: Player[];
-  coach?: {
-    name: string;
-    country: string;
+  mouse: {
+    dpi: number;
+    sensitivity: number;
+    edpi: number;
+    hz: number;
+    rawInput: boolean;
   };
-  lastUpdated: string;
+  video: {
+    resolution: string;
+    aspectRatio: string;
+    refreshRate: number;
+    displayMode: string;
+  };
+  crosshair: {
+    code: string;
+  };
+  peripherals: {
+    mouse: string;
+    keyboard: string;
+    headset: string;
+    monitor: string;
+    mousepad: string;
+  };
 }
