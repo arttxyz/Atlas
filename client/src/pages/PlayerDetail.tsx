@@ -1,23 +1,17 @@
 import { useParams, Link } from 'wouter';
 import RoleTag from '@/components/RoleTag';
-import { americasPlayers, americasTeams, playerSettingsExamples as americasSettings } from "@/data/vctAmericasData";
-import { emeaPlayers, emeaTeams, playerSettingsExamples as emeaSettings } from "@/data/vctEmeaData";
+import { americasPlayers, americasTeams, playerSettingsExamples as americasSettings } from '@/data/vctAmericasData';
+import { emeaPlayers, emeaTeams, playerSettingsExamples as emeaSettings } from '@/data/vctEmeaData';
 import { apacPlayers, apacTeams, playerSettingsExamples as apacSettings } from "@/data/vctApacData";
-
+import { chinaPlayers, chinaTeams, playerSettingsExamples as chinaSettings } from '@/data/vctChinaData';
 
 export default function PlayerDetail() {
   const params = useParams();
   const playerId = params.id;
-
-  // 1. Combinar todos os jogadores, times e configurações
-  const allPlayers = [...americasPlayers, ...emeaPlayers, ...apacPlayers];
-  const allTeams = [...americasTeams, ...emeaTeams, ...apacTeams];
-  const allSettings = [...americasSettings, ...emeaSettings, ...apacSettings];
-
-  // 2. Procurar o jogador na lista unificada
+  const allPlayers = [...americasPlayers, ...emeaPlayers, ...apacPlayers, ...chinaPlayers];
+  const allTeams = [...americasTeams, ...emeaTeams, ...apacTeams, ...chinaTeams];
+  const allSettings = [...americasSettings, ...emeaSettings, ...apacSettings, ...chinaSettings];
   const player = allPlayers.find((p) => p.id === playerId);
-  
-  // 3. Procurar o time e as configurações baseadas no jogador encontrado
   const team = player ? allTeams.find((t) => t.id === player.teamId) : null;
   const settings = allSettings.find((s) => s.playerId === playerId);
 

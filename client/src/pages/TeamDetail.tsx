@@ -3,11 +3,17 @@ import RoleTag from '@/components/RoleTag';
 import { americasTeams, americasPlayers } from '@/data/vctAmericasData';
 import { emeaTeams, emeaPlayers } from '@/data/vctEmeaData';
 import { apacTeams, apacPlayers } from "@/data/vctApacData";
+import { chinaPlayers, chinaTeams } from '@/data/vctChinaData';
 
 
 export default function TeamDetail() {
   const params = useParams();
   const teamId = params.id;
+   console.log("--- DEBUG TEAM DETAIL ---");
+  console.log("ID na URL:", teamId);
+  console.log("Times China carregados:", chinaTeams);
+  console.log("Times APAC carregados:", apacTeams);
+  console.log("-------------------------");
 
   // Procurar em ambas as regiões
   let team = americasTeams.find((t) => t.id === teamId);
@@ -21,6 +27,10 @@ export default function TeamDetail() {
    if (!team) {
     team = apacTeams.find((t) => t.id === teamId);
     teamPlayers = team ? apacPlayers.filter((p) => p.teamId === team?.id) : [];
+  }
+  if (!team) {
+    team = chinaTeams.find((t) => t.id === teamId);
+    teamPlayers = team ? chinaPlayers.filter((p) => p.teamId === team?.id) : [];
   }
   const activePlayers = teamPlayers.filter((p) => p.status === 'Active');
   const benchedPlayers = teamPlayers.filter((p) => p.status === 'Benched');
