@@ -2,6 +2,8 @@ import { useParams, Link } from 'wouter';
 import RoleTag from '@/components/RoleTag';
 import { americasTeams, americasPlayers } from '@/data/vctAmericasData';
 import { emeaTeams, emeaPlayers } from '@/data/vctEmeaData';
+import { apacTeams, apacPlayers } from "@/data/vctApacData";
+
 
 export default function TeamDetail() {
   const params = useParams();
@@ -15,6 +17,10 @@ export default function TeamDetail() {
   if (!team) {
     team = emeaTeams.find((t) => t.id === teamId);
     teamPlayers = team ? emeaPlayers.filter((p) => p.teamId === team?.id) : [];
+  }
+   if (!team) {
+    team = apacTeams.find((t) => t.id === teamId);
+    teamPlayers = team ? apacPlayers.filter((p) => p.teamId === team?.id) : [];
   }
   const activePlayers = teamPlayers.filter((p) => p.status === 'Active');
   const benchedPlayers = teamPlayers.filter((p) => p.status === 'Benched');

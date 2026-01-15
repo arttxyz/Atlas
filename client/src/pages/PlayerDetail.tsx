@@ -1,14 +1,25 @@
 import { useParams, Link } from 'wouter';
 import RoleTag from '@/components/RoleTag';
-import { americasPlayers, americasTeams, playerSettingsExamples } from '@/data/vctAmericasData';
+import { americasPlayers, americasTeams, playerSettingsExamples as americasSettings } from "@/data/vctAmericasData";
+import { emeaPlayers, emeaTeams, playerSettingsExamples as emeaSettings } from "@/data/vctEmeaData";
+import { apacPlayers, apacTeams, playerSettingsExamples as apacSettings } from "@/data/vctApacData";
+
 
 export default function PlayerDetail() {
   const params = useParams();
   const playerId = params.id;
 
-  const player = americasPlayers.find((p) => p.id === playerId);
-  const team = player ? americasTeams.find((t) => t.id === player.teamId) : null;
-  const settings = playerSettingsExamples.find((s) => s.playerId === playerId);
+  // 1. Combinar todos os jogadores, times e configurações
+  const allPlayers = [...americasPlayers, ...emeaPlayers, ...apacPlayers];
+  const allTeams = [...americasTeams, ...emeaTeams, ...apacTeams];
+  const allSettings = [...americasSettings, ...emeaSettings, ...apacSettings];
+
+  // 2. Procurar o jogador na lista unificada
+  const player = allPlayers.find((p) => p.id === playerId);
+  
+  // 3. Procurar o time e as configurações baseadas no jogador encontrado
+  const team = player ? allTeams.find((t) => t.id === player.teamId) : null;
+  const settings = allSettings.find((s) => s.playerId === playerId);
 
   if (!player || !team) {
     return (
