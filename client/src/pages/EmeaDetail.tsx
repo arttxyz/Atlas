@@ -2,7 +2,8 @@ import { Link } from 'wouter';
 import TeamCard from '@/components/TeamCard';
 import RegionSelector from '@/components/RegionSelector';
 import { emeaTeams, emeaPlayers } from '@/data/vctEmeaData';
-import type { Team, Player } from '@/shared/types';
+import type { Team, Player } from '@shared/types';
+import LiveStream from '@/components/LiveStream';
 
 export default function EmeaDetail() {
   // Contar jogadores por time
@@ -83,6 +84,9 @@ export default function EmeaDetail() {
           </div>
         </div>
       </section>
+      <div className="container pt-8">
+        <LiveStream regionId="emea" defaultChannel="valorant_emea" />
+      </div>
 
       {/* Region Selector Section */}
       <RegionSelector />

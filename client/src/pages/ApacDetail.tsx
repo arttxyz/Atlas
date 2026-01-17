@@ -85,7 +85,7 @@ export default function ApacDetail() {
         </div>
       </section>
       <div className="container pt-8">
-        <LiveStream regionId="americas" defaultChannel="valorant_pacific" />
+        <LiveStream regionId="APAC" defaultChannel="valorant_pacific" />
       </div>
 
       {/* Region Selector Section */}

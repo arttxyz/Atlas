@@ -2,7 +2,8 @@ import { Link } from "wouter";
 import TeamCard from "@/components/TeamCard";
 import RegionSelector from "@/components/RegionSelector";  
 import { chinaTeams,chinaPlayers } from "@/data/vctChinaData";
-import type { Team, Player } from "../shared/types";
+import type { Team, Player } from "@shared/types";
+import LiveStream from '@/components/LiveStream';
 
 
 export default function ChinaDetail() {
@@ -83,7 +84,9 @@ export default function ChinaDetail() {
                 </div>
               </div>
             </section>
-      
+           <div className="container pt-8">
+            <LiveStream regionId="china" defaultChannel="valorantesports_cn" />
+           </div>
             {/* Region Selector Section */}
             <RegionSelector />
       
