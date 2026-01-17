@@ -119,7 +119,7 @@ export const chinaTeams: Team[] = [
   },
 ];
 //Jogadores do VCT China 2026
-export const chinaPlayers: Player = [
+export const chinaPlayers: Player[] = [
   // EDward Gaming - Ativos
   {
     id: 'nobody',

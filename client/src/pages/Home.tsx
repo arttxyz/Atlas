@@ -2,6 +2,10 @@ import { Link } from 'wouter';
 import TeamCard from '@/components/TeamCard';
 import RegionSelector from '@/components/RegionSelector';
 import { americasTeams, americasPlayers } from '@/data/vctAmericasData';
+import LiveStream from '@/components/LiveStream';
+
+// Dentro do return do AmericasDetail:
+<LiveStream regionId="americas" defaultChannel="valorant_americas" />
 
 export default function Home() {
   // Contar jogadores por time
@@ -82,6 +86,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="container pt-8">
+        <LiveStream regionId="americas" defaultChannel="valorant_americas" />
+      </div>
 
       {/* Region Selector Section */}
       <RegionSelector />
@@ -124,9 +131,9 @@ export default function Home() {
               <h4 className="font-semibold text-gray-300 mb-2">Regiões</h4>
               <ul className="text-sm text-gray-400 space-y-1">
                 <li>VCT Americas (Ativo)</li>
-                <li>VCT EMEA (Em breve)</li>
-                <li>VCT APAC (Em breve)</li>
-                <li>VCT China (Em breve)</li>
+                <li>VCT EMEA (Ativo)</li>
+                <li>VCT APAC (Ativo)</li>
+                <li>VCT China (Ativo)</li>
               </ul>
             </div>
             <div>

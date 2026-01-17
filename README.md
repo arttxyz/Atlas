@@ -192,7 +192,7 @@ interface PlayerSettings {
 
 Coloque as imagens na pasta `client/public/images/regions/`:
 
-- `vct-americas-logo.png` (80x80px, PNG transparente)
+- `vct-americas-logo.png`
 - `vct-emea-logo.png`
 - `vct-apac-logo.png`
 - `vct-china-logo.png`

@@ -651,8 +651,7 @@ export const americasPlayers: Player[] = [
     country: 'United States',
     status: 'Active',
   },
-]; // <--- CORREÇÃO: Fechamento da lista americasPlayers
-
+];//Fechamento da lista americasPlayers
 // Função para gerar configurações aleatórias
 function generateRandomSettings(playerId: string): PlayerSettings {
   const dpiOptions = [400, 450, 500, 600, 800, 1000, 1200];

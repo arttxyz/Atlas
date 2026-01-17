@@ -2,7 +2,8 @@ import { Link } from 'wouter';
 import TeamCard from '@/components/TeamCard';
 import RegionSelector from '@/components/RegionSelector';
 import { apacTeams, apacPlayers } from '@/data/vctApacData';
-import type { Team, Player } from '@/shared/types';
+import type { Team, Player } from '@shared/types';
+import LiveStream from '@/components/LiveStream';
 
 export default function ApacDetail() {
   // Contar jogadores por time
@@ -83,6 +84,9 @@ export default function ApacDetail() {
           </div>
         </div>
       </section>
+      <div className="container pt-8">
+        <LiveStream regionId="americas" defaultChannel="valorant_pacific" />
+      </div>
 
       {/* Region Selector Section */}
       <RegionSelector />
